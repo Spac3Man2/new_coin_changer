@@ -21,4 +21,16 @@ class TestNewCoinChanger < Minitest::Test
      assert_equal({nickel: 1}, results)
     end
 
+    def test_for_one_nickel_and_3_pennies_returns_8_cents
+    # Runs a test to see if the function returns change as 5 cents and it works
+     results = new_coin_changer(8) # 5 represents 1 nickel in the function.
+     assert_equal({nickel: 1, penny: 3}, results)
+    end
+
+    def test_for_one_nickel_and_4_pennies_returns_9_cents
+    # Runs a test to see if the function returns change as 5 cents and it works
+     results = new_coin_changer(9) # 5 represents 1 nickel in the function.
+     assert_equal({nickel: 1, penny: 4}, results)
+    end
+
 end       	
