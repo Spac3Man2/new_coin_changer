@@ -39,4 +39,16 @@ class TestNewCoinChanger < Minitest::Test
      assert_equal({dime: 1}, results)
     end
 
+    def test_for_one_dime_and_1_penny_returns_11_cents
+    # Runs a test to see if the function returns change as 11 cents and it works
+     results = new_coin_changer(11) # 11  represents 1 dime and 1 penny in the function.
+     assert_equal({dime: 1, penny: 1}, results)
+    end
+
+    def test_for_one_dime_and_1_nickel_and_3_pennies_returns_18_cents
+    # Runs a test to see if the function returns change as 18 cents and it works
+     results = new_coin_changer(18) # 18  represents 1 dime and 1 nickel and 3 penny in the function.
+     assert_equal({dime: 1, nickel: 1, penny: 3}, results)
+    end
+
 end       	
