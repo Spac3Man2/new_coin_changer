@@ -10,7 +10,7 @@ class TestNewCoinChanger < Minitest::Test
     end
 
     def test_for_3_pennies_returns_3_cents
-     
+    # Runs a test to see if the function returns change as 3 cents and it works
      results = new_coin_changer(3)
      assert_equal({penny: 3}, results)
     end
