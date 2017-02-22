@@ -1,8 +1,11 @@
 def new_coin_changer(amount)
 	  
    change = {} 	# There is no change to give. The empty hash will represent that if my amount equals zero.
+    
+    if amount == 10
+		change[:dime] = 1
 
-    if amount == 0
+    elsif amount == 0
     	change = {}
 
 	elsif amount < 5 # If the amount is less then 5 the function will return a penny or pennies.
@@ -20,8 +23,11 @@ def new_coin_changer(amount)
 	elsif amount > 5
 		  change[:nickel] = 1
 		  change[:penny] = amount - 5
-		  	
-    
+	
+	# elsif amount == 10
+	# 	change[:dime] = 1
+
+	 			  	
     end     
     change 
 end
