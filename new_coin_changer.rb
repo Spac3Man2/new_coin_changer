@@ -1,9 +1,13 @@
 def new_coin_changer(amount)
 	  
    change = {} 	# There is no change to give. The empty hash will represent that if my amount equals zero.
-    if amount > 20 && amount < 25
-    	 change[:dime] = 2
-    	 change[:penny] = amount - 20
+    
+    if amount == 25
+    	change[:quarter] = 1
+
+    elsif amount > 20 && amount < 25
+    	change[:dime] = 2
+        change[:penny] = amount - 20
 
     elsif amount == 20 
     	change[:dime] = 2
@@ -32,9 +36,9 @@ def new_coin_changer(amount)
 
 		change[:nickel] = 1
 		
-    elsif amount > 5
-    	  change[:nickel] = 1
-		  change[:penny] = amount - 5
+    elsif amount > 5 # If amount is less then 5 the function should return 4 pennies.
+    	change[:nickel] = 1
+		change[:penny] = amount - 5 #Is telling me that since the amount is less then 5 the funtion will return a value of pennies. (READING THIS BACKWARDS WILL SIMPLIFY THINGS MUCH EASIER WHERE: change[:penny] = amount - 5, IF READ BACKWARDS IT SHOULD BE LOOKED AT AS 5 - AMOUNT = PENNY[:CHANGE] ) 
 
 	end     
     change 
