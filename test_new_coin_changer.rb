@@ -78,4 +78,9 @@ class TestNewCoinChanger < Minitest::Test
         assert_equal({quarter: 1, nickel: 1, penny: 3}, results)
     end
 
+    def test_for_1_quarter_1_dime_to_return_35_cents
+        results = new_coin_changer(35)
+        assert_equal({quarter: 1, dime: 1}, results)
+    end
+
 end    
