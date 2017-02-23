@@ -1,8 +1,14 @@
 def new_coin_changer(amount)
 	  
-   change = {} 	# There is no change to give. The empty hash will represent that if my amount equals zero.
-    
-    if amount > 25 && amount < 30 # The amount of 27 cents is greater then 25 and less than 30.
+    change = {} 	# There is no change to give. The empty hash will represent that if my amount equals zero.
+      
+
+    if amount > 30 && amount < 35
+    	change[:quarter] = 1
+    	change[:nickel] = 1
+    	change[:penny] = amount - 30
+
+    elsif amount > 25 && amount < 30 # The amount of 27 cents is greater then 25 and less than 30.
     	change[:quarter] = 1 
     	change[:penny] = amount - 25 # with the amount being less then 30 and having a total of 27 that AMOUNT will SUBTRACT 1 quarter or 25 cents from from the total causing the PENNY(AMOUNT) to equal 2 pennies.
  
