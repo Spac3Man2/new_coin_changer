@@ -2,7 +2,12 @@ def new_coin_changer(amount)
 	  
     change = {} 	# There is no change to give. The empty hash will represent that if my amount equals zero.
     
-    if amount > 60 && amount < 70
+    if amount > 70 && amount < 80
+    	change[:quarter] = 3
+    	change[{}] # Test to see what would happen if Iinput this into the test function. The test still passes returning 76 cents.
+    	change[:penny] = amount - 75
+
+    elsif amount > 60 && amount < 70
     	change[:quarter] = 2
     	change[:dime] = 1
         change[:nickel] = 1
